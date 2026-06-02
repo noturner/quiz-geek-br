@@ -1,115 +1,140 @@
-QuizGeek BR
+# QuizGeek BR
+
 QuizGeek BR é um aplicativo de quiz para Android focado em cultura pop, séries e animes.
+
 O app traz diversos questionários temáticos com perguntas sobre:
 
-Game of Thrones
-Stranger Things
-The Mandalorian
-Fullmetal Alchemist: Brotherhood
-Prison Break
-Breaking Bad
-The Boys
-Attack on Titan
-One Piece
-Outros animes e séries (Dragon Ball, Naruto, etc.)
-Cada tema possui uma sequência de perguntas de múltipla escolha, feedback visual para respostas certas e erradas, trilha sonora, efeitos sonoros e mensagens personalizadas no final de cada quiz.
+- Game of Thrones  
+- Stranger Things  
+- The Mandalorian  
+- Fullmetal Alchemist: Brotherhood  
+- Prison Break  
+- Breaking Bad  
+- The Boys  
+- Attack on Titan  
+- Dragon Ball  
+- Naruto  
+- One Piece  
+- Outros animes e séries
 
-Tecnologias utilizadas
-Linguagem: Kotlin
-Plataforma: Android
-Arquitetura: Activities e Services
-Bibliotecas principais:
-AndroidX AppCompat
-MediaPlayer (para sons de vitória/derrota, trilha, etc.)
-VideoView (tela de splash com vídeo)
-Estrutura principal do projeto
+Cada tema possui uma sequência de perguntas de múltipla escolha, feedback visual para respostas certas e erradas, trilha sonora de fundo, efeitos sonoros e mensagens personalizadas no final de cada quiz.
+
+
+## Tecnologias utilizadas
+
+- **Linguagem:** Kotlin  
+- **Plataforma:** Android  
+- **Arquitetura:** baseada em Activities (uma por tema de quiz)  
+- **Multimídia:**
+  - `MediaPlayer` para sons (acertos, erros, vitória, falha)
+  - `VideoView` para a tela de splash com vídeo de introdução
+
+
+## Estrutura principal do projeto
+
 Algumas classes importantes:
 
-SplashActivity
+- `SplashActivity.kt`  
+  - Exibe um vídeo de introdução (`intro` em `res/raw`) usando `VideoView`  
+  - Ao fim do vídeo, abre a tela inicial (`Inicial`)
 
-Exibe um vídeo de introdução (intro) usando VideoView e depois redireciona para a tela inicial (Inicial).
-Inicial
+- `Inicial.kt`  
+  - Tela inicial / menu principal do app  
+  - Navega para outras telas, como créditos e seleção de categorias
 
-Tela inicial do app (não exibida aqui, mas presente no projeto) que leva o usuário para o menu de categorias.
-Two
+- `Two.kt`  
+  - Tela de seleção principal dos modos:
+    - `Three2`: séries (Game of Thrones, Stranger Things, The Mandalorian, etc.)  
+    - `Three`: animes (Dragon Ball, Naruto, One Piece, etc.)
 
-Tela de menu principal para escolher categorias de quiz, levando para:
-Three (animes)
-Three2 (séries)
-Menus de categorias:
+- `Three2.kt`  
+  - Menu de séries:
+    - `Eleven` – Game of Thrones  
+    - `Twelve` – Stranger Things  
+    - `Thirteen` – The Mandalorian  
+    - `Fourteen` – The Witcher  
+    - `Fifteen` – Breaking Bad  
+    - `Sixteen` – Prison Break  
+    - `Seventeen` – Supernatural  
+    - `Eighteen` – The Boys  
 
-Three – Menu de animes (Dragon Ball, Naruto, One Piece, etc.)
-Three2 – Menu de séries (Game of Thrones, Stranger Things, Breaking Bad, etc.)
-Telas de quizzes (exemplos):
+- `Three.kt`  
+  - Menu de animes:
+    - `Four` – Dragon Ball  
+    - `Five` – Naruto  
+    - `Six` – One Piece  
+    - `Seven` – Jujutsu Kaisen  
+    - `Eight` – Attack on Titan  
+    - `Nine` – Demon Slayer  
+    - `Ten` – Fullmetal Alchemist: Brotherhood  
 
-Four, Five, Six, Seven, Eight, Nine, Ten – Quizzes de animes/mangás
-Eleven, Twelve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen – Quizzes de séries
-BaseActivity
+- `MusicService.kt`  
+  - Serviço responsável pela trilha sonora em background  
+  - Iniciado a partir da `BaseActivity`
 
-Classe base para as Activities do app.
-Responsável por iniciar o MusicService (música de fundo) quando a primeira Activity é criada.
-MusicService
+- `BaseActivity.kt`  
+  - Activity base que:
+    - Configura o layout padrão (atividade inicial)  
+    - Garante que o `MusicService` seja iniciado quando a primeira activity é criada
 
-Serviço que controla a música de fundo enquanto o app está aberto.
-Creditos
+- `Creditos.kt`  
+  - Tela de créditos do app
 
-Tela de créditos do aplicativo.
-Funcionamento dos quizzes
-Cada Activity de quiz (por exemplo, Eleven, Twelve, Thirteen etc.) segue um padrão:
+Cada Activity de quiz (como `Eleven`, `Twelve`, `Thirteen`, `Ten`, `Sixteen`, `Fifteen`, `Eight`, `Eighteen`, etc.) segue um padrão:
 
-Uma lista de perguntas é definida em código via uma lista de Question:
-questionText – enunciado
-correctAnswer – resposta correta
-answers – lista de 4 alternativas
-As perguntas são embaralhadas com .shuffled().
-Cada pergunta:
-Exibe o texto e um contador do tipo Pergunta X/Y
-Mostra quatro botões de resposta
-Ao clicar:
-Resposta correta: botão fica verde, som de acerto toca, pontuação é incrementada
-Resposta errada: botão fica vermelho, a alternativa correta é destacada, som de erro toca
-Ao final:
-Calcula a pontuação percentual
-Mostra mensagem personalizada conforme o desempenho
-Exibe quantas perguntas o usuário acertou
-Toca um som de celebração ou de falha
-Depois de alguns segundos, retorna ao menu (Two)
-Como executar o projeto
-Clonar o repositório
-   git clone https://github.com/seu-usuario/quizgeek-br.git
-   cd quizgeek-br
-Abrir no Android Studio
+- Lista de perguntas (`questions`) com:
+  - Texto da pergunta
+  - Resposta correta
+  - Lista de alternativas
+- Quatro botões de resposta (`buttonAnswer1` a `buttonAnswer4`)
+- Lógica para:
+  - Embaralhar respostas  
+  - Validar resposta clicada  
+  - Colorir botões (verde/vermelho)  
+  - Contabilizar acertos  
+  - Reproduzir sons de acerto/erro  
+  - Exibir mensagem final personalizada de acordo com a pontuação  
+  - Voltar para a tela de seleção (`Two`)
 
-Abra o Android Studio
-Clique em "Open an Existing Project"
-Selecione a pasta do projeto
-Build e run
 
-Aguarde o Gradle sincronizar
-Conecte um dispositivo Android ou inicie um emulador
-Clique em "Run" (botão ▶) para instalar e rodar o app
-Estrutura de arquivos (resumo)
-app/src/main/java/com/team7dev/quizgeekbr/
-BaseActivity.kt
-SplashActivity.kt
-Inicial.kt
-Two.kt, Three.kt, Three2.kt
-Activities de quiz: Four.kt até Eighteen.kt
-MusicService.kt
-Creditos.kt
-QuizGeekBRApplication.kt
-app/src/main/res/layout/
-Layouts para cada Activity (telas de quiz, menu, splash, etc.)
-app/src/main/res/raw/
-intro (vídeo de abertura)
-sound_win, sound_wrong, sound_celebration, sound_fail (efeitos sonoros)
-Roadmap / Possíveis melhorias
-Adicionar mais categorias e perguntas
-Salvar pontuações e histórico do usuário
-Sistema de ranking/local leaderboard
-Tradução para outros idiomas
-Migração para uma arquitetura com ViewModel e LiveData/Compose (futuro)
-Créditos
-Desenvolvimento: [seu nome / time]
-Perguntas e conteúdo: [seu nome / colaboradores]
-Projeto criado como um quiz de cultura geek para fãs de séries e animes.
+## Recursos de áudio e vídeo
+
+Na pasta `res/raw`, o projeto utiliza:
+
+- `intro` – vídeo exibido na `SplashActivity`
+- `sound_win` – som de acerto
+- `sound_wrong` – som de erro
+- `sound_celebration` – som de vitória (bom desempenho)
+- `sound_fail` – som de falha (baixo desempenho)
+
+
+## Como executar o projeto
+
+1. Abra o projeto no **Android Studio** (ou importe o projeto Gradle).
+2. Conecte um dispositivo Android ou use um emulador.
+3. Compile e rode o app:
+   - Menu *Run > Run 'app'* ou ícone de **Play**.
+
+
+## Roadmap / Possíveis melhorias
+
+- Adicionar mais categorias e perguntas
+- Salvar pontuações e histórico do usuário (leaderboard local)
+- Modo desafio (tempo limitado por pergunta)
+- Tradução para outros idiomas
+- Refatoração para uma arquitetura com ViewModel / Jetpack (futuro)
+- Tela de configurações (mutar sons, escolher temas, etc.)
+
+
+## Créditos
+
+- Desenvolvimento: **Gustavo de Oliveira** (ajuste com seu nome completo ou nick)  
+- Conteúdo de perguntas: **Autor(es) do projeto QuizGeek BR**  
+- Projeto criado como um quiz de cultura geek para fãs de séries e animes.
+  
+
+## Licença
+
+Este projeto está licenciado sob os termos da licença MIT.
+
+Você pode copiar, modificar e distribuir este software, desde que mantenha o aviso de copyright e a licença original.
