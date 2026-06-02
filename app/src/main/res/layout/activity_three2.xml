@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".Three"
+    android:background="@drawable/background"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="50mm"
+        android:contentDescription="@string/version"
+        android:text="@string/v1_0_1"
+        android:textColor="@color/black"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="InOrMmUsage,TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/seta1e"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/seta1e"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/DescriptionSeta1"
+        android:onClick="iniciar"
+        tools:ignore="UsingOnClickInXml" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/DescriptionImage1"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintBottom_toTopOf="@id/logo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <Button
+                android:id="@+id/button11"
+                style="@style/BotaoBrancoPreto"
+                android:onClick="iniciargot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/game_of_thrones"
+                android:background="@drawable/button_background"
+                tools:ignore="OnClick,UsingOnClickInXml,VisualLintButtonSize" />
+
+
+            <Button
+                android:id="@+id/button12"
+                style="@style/BotaoBrancoPreto"
+                android:onClick="iniciarst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/stranger_things"
+                android:background="@drawable/button_background"
+                tools:ignore="OnClick,UsingOnClickInXml,VisualLintButtonSize"
+                />
+
+            <Button
+                android:id="@+id/button13"
+                style="@style/BotaoBrancoPreto"
+                android:onClick="iniciartm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/the_mandalorian"
+                android:background="@drawable/button_background"
+                tools:ignore="OnClick,UsingOnClickInXml,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/button14"
+                style="@style/BotaoBrancoPreto"
+                android:onClick="iniciartw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/the_witcher"
+                android:background="@drawable/button_background"
+                tools:ignore="OnClick,UsingOnClickInXml,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/button15"
+                style="@style/BotaoBrancoPreto"
+                android:onClick="iniciarbb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/breaking_bad"
+                android:background="@drawable/button_background"
+                tools:ignore="OnClick,UsingOnClickInXml,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/button16"
+                style="@style/BotaoBrancoPreto"
+                android:onClick="iniciartb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/the_boys"
+                android:background="@drawable/button_background"
+                tools:ignore="OnClick,UsingOnClickInXml,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/button17"
+                style="@style/BotaoBrancoPreto"
+                android:onClick="iniciarpb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/prision_break"
+                android:background="@drawable/button_background"
+                tools:ignore="OnClick,UsingOnClickInXml,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/button18"
+                style="@style/BotaoBrancoPreto"
+                android:onClick="iniciarsn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/supernatural"
+                android:background="@drawable/button_background"
+                tools:ignore="OnClick,UsingOnClickInXml,VisualLintButtonSize" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/DescriptionImage2"
+        android:src="@drawable/logo2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

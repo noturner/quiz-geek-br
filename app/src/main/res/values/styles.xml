@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="FadeAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+
+    <style name="BotaoBrancoPreto">
+
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <!-- BOTOES ANIMES -->
+
+    <style name="ContainerComponents"> <!-- botao 1/INICIAR-->
+
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Iniciar</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents2"> <!-- botao 2/SERIES-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Séries</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents3"> <!-- botao 3/ANIMES-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Animes</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+
+    <style name="ContainerComponents4"> <!-- botao 4/TODOS-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Animes</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents5"> <!-- botao 5/Jujutso Kaisen-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Animes</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents6"> <!-- botao 6/Naruto-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Animes</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents7"> <!-- botao 7/Demon Slayer-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Animes</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents8"> <!-- botao 8/One Piece-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Animes</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents9"> <!-- botao 9/Dragon Ball-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Animes</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents10"> <!-- botao 10/Attack in Titans-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">@string/Animes</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <!-- BOTOES SERIES -->
+
+    <style name="ContainerComponents11"> <!-- botao 11/GameOfThrones-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">Game Of Thrones</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents12"> <!-- botao 12/StrangerThings-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">Stranger Things</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents13"> <!-- botao 13/TheMandalorian-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">The Mandalorian</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents14"> <!-- botao 14/TheWitcher-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">The Witcher</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents15"> <!-- botao 15/BreakingBad-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">Breaking Bad</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents16"> <!-- botao 16/TheBoys-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">The Umbrella Academy</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="ContainerComponents17"> <!-- botao 17/TODOS-->
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:text">Todos</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/container_components</item>
+
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" > // <!-- pode dar erro -->
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/black</item> <!-- Cor de fundo da janela -->
+        <item name="android:textColorPrimary">@color/black</item> <!-- Cor do texto principal -->
+        <item name="android:textColorSecondary">@color/black</item> <!-- Cor do texto secundário -->
+        <item name="android:buttonStyle">@style/AppButtonStyle</item> <!-- Estilo dos botões -->
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="AppButtonStyle" parent="Widget.AppCompat.Button">
+        <!-- Customize your button style here. -->
+        <item name="android:background">@drawable/button_background</item> <!-- Background do botão -->
+        <item name="android:textColor">@color/black</item> <!-- Cor do texto do botão -->
+        <item name="android:textAllCaps">false</item> <!-- Não transformar o texto em caixa alta -->
+        <item name="android:paddingVertical" tools:targetApi="o">12dp</item> <!-- Espaçamento vertical interno -->
+        <item name="android:paddingHorizontal" tools:targetApi="o">24dp</item> <!-- Espaçamento horizontal interno -->
+    </style>
+<style name="textViewQuestion">
+    <item name="android:textColor">@color/black</item>
+
+</style>
+
+
+
+</resources>

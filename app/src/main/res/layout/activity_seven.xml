@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/background"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/version"
+        android:text="@string/v1_0_1"
+        android:textColor="@color/black"
+        android:textStyle="italic|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="0dp"
+        tools:ignore="InOrMmUsage,RelativeOverlap,TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/DescriptionHome"
+        android:onClick="home"
+        android:src="@drawable/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UsingOnClickInXml,TouchTargetSizeCheck" />
+
+    <!-- TextView para exibir a mensagem de score -->
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:textColor="#800000"
+        android:textSize="24sp"
+        android:visibility="gone"
+        android:textStyle="bold"/>
+
+    <!-- TextView para exibir a mensagem final -->
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+    <!-- Contador de perguntas -->
+    <TextView
+        android:id="@+id/textViewQuestionCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/version"
+        android:layout_centerHorizontal="true"
+        android:text="@string/pergunta_1_30"
+        android:textColor="#800000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- Pergunta -->
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pergunta"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-black"
+        android:layout_alignTop="@id/logo2"
+        android:layout_below="@id/version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        tools:ignore="RelativeOverlap" />
+
+    <!-- Layout para respostas -->
+    <LinearLayout
+        android:id="@+id/answersLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/textViewQuestion"
+        android:gravity="center"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="22dp">
+
+
+        <!-- Resposta 1 -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/textViewAnswerA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"
+                />
+
+            <Button
+                android:layout_toEndOf="@id/textViewAnswerA"
+                android:id="@+id/buttonAnswer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/resposta_1"
+                android:textSize="16sp"
+                android:onClick="checkAnswer"
+                android:layout_centerVertical="true"
+                tools:ignore="UsingOnClickInXml,VisualLintButtonSize" />
+        </RelativeLayout>
+
+        <!-- Resposta 2 -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/textViewAnswerB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/b"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"/>
+
+            <Button
+                android:id="@+id/buttonAnswer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textViewAnswerB"
+                android:text="@string/resposta_2"
+                android:textSize="16sp"
+                android:onClick="checkAnswer"
+                android:layout_centerVertical="true"
+                tools:ignore="UsingOnClickInXml,VisualLintButtonSize" />
+        </RelativeLayout>
+
+        <!-- Resposta 3 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/textViewAnswerC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/c"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"/>
+
+            <Button
+                android:id="@+id/buttonAnswer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textViewAnswerC"
+                android:text="@string/resposta_3"
+                android:textSize="16sp"
+                android:onClick="checkAnswer"
+                android:layout_centerVertical="true"
+                tools:ignore="UsingOnClickInXml,VisualLintButtonSize" />
+        </RelativeLayout>
+
+        <!-- Resposta 4 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/textViewAnswerD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/d"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp" />
+
+            <Button
+                android:id="@+id/buttonAnswer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textViewAnswerD"
+                android:text="@string/resposta_4"
+                android:textSize="16sp"
+                android:onClick="checkAnswer"
+                android:layout_centerVertical="true"
+                tools:ignore="UsingOnClickInXml,VisualLintButtonSize" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/DescriptionImage2"
+        android:src="@drawable/logo2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
